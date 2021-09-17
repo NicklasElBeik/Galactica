@@ -10,7 +10,13 @@ namespace Galactica
     {
         public StarType Type { get; set; }
         public int Temperature { get; set; }
-        public List <Planet> PlanetList { get; set; }
-        public enum PlanetType { Terrestial, Giant, Dwarf, Gas_Giant }
+
+        public List<Planet> planets = new List<Planet>();
+        public Position Coord { get; }
+        public Star()
+        {
+            this.position = new Position();
+        }
     }
+        public enum PlanetType { Terrestial, Giant, Dwarf, Gas_Giant }
 }

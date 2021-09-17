@@ -13,11 +13,11 @@ namespace Galactica
         public Position position { get; set; }
         public class Position
         {
-            public int PositionX { get; set; }
-            public int PositionY { get; set; }
+            public int PosX { get; set; }
+            public int PosY { get; set; }
             public override string ToString()
             {
-                return "(" + PositionX + "," + PositionY + ")";
+                return $"({PosX},{PosY})";
             }
         }
         public enum StarType { YellowDwarf, White, BlueNeutron, RedGiant }

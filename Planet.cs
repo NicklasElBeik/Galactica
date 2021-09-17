@@ -9,13 +9,15 @@ namespace Galactica
     class Planet : SpaceObjects
     {
         public double Diameter { get; set; }
-        public DateTime RotationPeriod { get; set; }
-        public DateTime RevolutionPeriod { get; set; }
-        public List <Moon> MoonList { get; set; }
+        public double RotationPeriod { get; set; }
+        public double RevolutionPeriod { get; set; }
+        public PlanetType Type { get; set; }
+
+        public List<Moon> moons = new List<Moon>();
         public double Distance(Star star, Planet planet)
         {
-            double distance = Math.Sqrt(Math.Pow((star.position.PositionX - planet.position.PositionX), 2)
-                + Math.Pow((star.position.PositionY - planet.position.PositionY), 2));
+            double distance = Math.Sqrt(Math.Pow((star.position.PosX - planet.position.PosX), 2)
+                + Math.Pow((star.position.PosY - planet.position.PosY), 2));
             return distance;
         }
     }
